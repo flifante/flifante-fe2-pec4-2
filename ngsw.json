@@ -1,0 +1,115 @@
+{
+  "configVersion": 1,
+  "timestamp": 1779272844819,
+  "index": "/flifante-fe2-pec4-2/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/flifante-fe2-pec4-2/chunk-25CPDXZD.js",
+        "/flifante-fe2-pec4-2/chunk-4RT7F65Z.js",
+        "/flifante-fe2-pec4-2/chunk-677ORT6R.js",
+        "/flifante-fe2-pec4-2/chunk-NT3XIO5A.js",
+        "/flifante-fe2-pec4-2/chunk-PYOJAASM.js",
+        "/flifante-fe2-pec4-2/chunk-X3HZDE2P.js",
+        "/flifante-fe2-pec4-2/chunk-YXF63NXD.js",
+        "/flifante-fe2-pec4-2/index.html",
+        "/flifante-fe2-pec4-2/main-JHT2AIKQ.js",
+        "/flifante-fe2-pec4-2/manifest.webmanifest",
+        "/flifante-fe2-pec4-2/polyfills-5CFQRCPP.js",
+        "/flifante-fe2-pec4-2/styles-TILXOQST.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/flifante-fe2-pec4-2/assets/icons/icon-128x128.png",
+        "/flifante-fe2-pec4-2/assets/icons/icon-144x144.png",
+        "/flifante-fe2-pec4-2/assets/icons/icon-192x192.png",
+        "/flifante-fe2-pec4-2/assets/icons/icon-512x512.png",
+        "/flifante-fe2-pec4-2/assets/icons/icon-72x72.png",
+        "/flifante-fe2-pec4-2/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "meals-api",
+      "patterns": [
+        "https:\\/\\/www\\.themealdb\\.com\\/api\\/json\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 50,
+      "maxAge": 21600000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    },
+    {
+      "name": "meal-images",
+      "patterns": [
+        "https:\\/\\/www\\.themealdb\\.com\\/images\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 604800000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/flifante-fe2-pec4-2/assets/icons/icon-128x128.png": "4c4d8b52acbccdde8785a23a925df02b2b709572",
+    "/flifante-fe2-pec4-2/assets/icons/icon-144x144.png": "4a4b5c88906fda21615537006eeb3ecc1b9fb69f",
+    "/flifante-fe2-pec4-2/assets/icons/icon-192x192.png": "ed2a95a1747e13d40eb0646d5a76a2ecb2452e16",
+    "/flifante-fe2-pec4-2/assets/icons/icon-512x512.png": "85f5218076284fa2426d72626bc698bd42b87fc5",
+    "/flifante-fe2-pec4-2/assets/icons/icon-72x72.png": "00236c0d89f712516388daaf076a37ede875246f",
+    "/flifante-fe2-pec4-2/assets/icons/icon-96x96.png": "c79d0beed8637363486c4c7278a96d25e035c782",
+    "/flifante-fe2-pec4-2/chunk-25CPDXZD.js": "73314949575a3b172150a81f40cc99884a360625",
+    "/flifante-fe2-pec4-2/chunk-4RT7F65Z.js": "7f9bf17ab6f68b287e4b29ffbcac5c1c4a5a3197",
+    "/flifante-fe2-pec4-2/chunk-677ORT6R.js": "ecc0651f1d1997a109ddcbe3a042c045bc95b210",
+    "/flifante-fe2-pec4-2/chunk-NT3XIO5A.js": "9fefe1a4d77e62624d5915d4c34fb85bd669b442",
+    "/flifante-fe2-pec4-2/chunk-PYOJAASM.js": "87a7ac41f745d947ed4b7083df2765685c712681",
+    "/flifante-fe2-pec4-2/chunk-X3HZDE2P.js": "d6ff66bd22c7e3e4be4b0cb79c07444ba89b55bf",
+    "/flifante-fe2-pec4-2/chunk-YXF63NXD.js": "d13f9af705b8daec00c385f63b5fb9a513c0b55c",
+    "/flifante-fe2-pec4-2/index.html": "674ddb0337d26c6454ddf594b22d9993e1a08d61",
+    "/flifante-fe2-pec4-2/main-JHT2AIKQ.js": "e5f11717e2ba5b6b26bf4b2afc454ea89b2d2f0d",
+    "/flifante-fe2-pec4-2/manifest.webmanifest": "62038941064d640048761244ad6a5555a4f1b7a4",
+    "/flifante-fe2-pec4-2/polyfills-5CFQRCPP.js": "f2241e9a25858f895ce299d15f6f22e849e2fd72",
+    "/flifante-fe2-pec4-2/styles-TILXOQST.css": "1bad56bceb3fbfb59dfae0815b3c1714170e0c03"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
