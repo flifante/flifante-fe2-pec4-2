@@ -1,0 +1,15 @@
+<mat-card class="meal-card" (click)="onClick()">
+  <img
+    mat-card-image
+    [src]="meal.strMealThumb"
+    [alt]="meal.strMeal"
+    class="meal-image"
+    loading="lazy"
+  />
+  <mat-card-header>
+    <mat-card-title class="meal-title">{{ meal.strMeal }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-button color="primary">Ver receta →</button>
+  </mat-card-actions>
+</mat-card>

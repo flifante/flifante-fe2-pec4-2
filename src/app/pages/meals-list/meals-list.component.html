@@ -1,0 +1,64 @@
+<div class="list-container">
+
+  <div class="list-header">
+    <h1>Recetas del Mundo</h1>
+
+    <div class="controls">
+      <mat-form-field appearance="outline" class="category-select">
+        <mat-label>Categoría</mat-label>
+        <mat-select [(ngModel)]="selectedCategory" (ngModelChange)="loadMeals()">
+          @for (cat of categories; track cat) {
+            <mat-option [value]="cat">{{ cat }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-button-toggle-group [(ngModel)]="viewMode" aria-label="Vista">
+        <mat-button-toggle value="card">
+          <mat-icon>grid_view</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="grid">
+          <mat-icon>table_rows</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+
+  @if (isLoading) {
+    <div class="loading">
+      <mat-spinner diameter="56" />
+    </div>
+  }
+
+  @if (!isLoading && error) {
+    <div class="error">
+      <p>{{ error }}</p>
+      <button mat-raised-button color="primary" (click)="loadMeals()">Reintentar</button>
+    </div>
+  }
+
+  @if (!isLoading && !error && viewMode === 'card') {
+    <div class="cards-grid" [@listAnim]="pagedMeals.length">
+      @for (meal of pagedMeals; track meal.idMeal) {
+        <app-card [meal]="meal" (cardClick)="onMealClick($event)" />
+      }
+    </div>
+  }
+
+  @if (!isLoading && !error && viewMode === 'grid') {
+    <div [@fadeIn]>
+      <app-grid [meals]="pagedMeals" (rowClick)="onMealClick($event)" />
+    </div>
+  }
+
+  @if (!isLoading && !error) {
+    <mat-paginator
+      [length]="allMeals.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[6, 12, 24]"
+      [pageIndex]="currentPage"
+      (page)="onPageChange($event)"
+    />
+  }
+
+</div>

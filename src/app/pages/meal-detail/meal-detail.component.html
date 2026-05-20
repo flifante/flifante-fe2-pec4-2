@@ -1,0 +1,90 @@
+<div class="detail-container">
+
+  @if (!isLoading && meal) {
+    <div class="detail-header">
+      <h1>{{ meal.strMeal }}</h1>
+      <button mat-raised-button color="primary" (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Back
+      </button>
+    </div>
+  }
+
+  @if (isLoading) {
+    <div class="loading">
+      <mat-spinner diameter="56" />
+    </div>
+  }
+
+  @if (!isLoading && error) {
+    <div class="error">
+      <p>{{ error }}</p>
+      <button mat-button (click)="goBack()">Volver</button>
+    </div>
+  }
+
+  @if (!isLoading && meal) {
+    <div class="detail-content">
+
+      <img [src]="meal.strMealThumb" [alt]="meal.strMeal" class="meal-image" />
+
+      <mat-card class="info-card mat-elevation-z3">
+        <mat-card-content>
+
+          <div class="chips-row">
+            <mat-chip-set>
+              <mat-chip>{{ meal.strCategory }}</mat-chip>
+              <mat-chip>{{ meal.strArea }}</mat-chip>
+              @if (meal.strTags) {
+                @for (tag of meal.strTags.split(','); track tag) {
+                  <mat-chip>{{ tag.trim() }}</mat-chip>
+                }
+              }
+            </mat-chip-set>
+          </div>
+
+          <mat-divider />
+
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>Show all details</mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <h3>Ingredientes</h3>
+              <mat-list>
+                @for (item of ingredients; track item.name) {
+                  <mat-list-item>
+                    <span matListItemTitle>{{ item.name }}</span>
+                    <span matListItemLine>{{ item.measure }}</span>
+                  </mat-list-item>
+                }
+              </mat-list>
+
+              <mat-divider />
+
+              <h3>Instrucciones</h3>
+              <p class="instructions">{{ meal.strInstructions }}</p>
+
+              @if (meal.strYoutube) {
+                <mat-divider />
+                <a
+                  [href]="meal.strYoutube"
+                  target="_blank"
+                  mat-stroked-button
+                  color="primary"
+                  class="yt-link"
+                >
+                  <mat-icon>play_circle</mat-icon> Ver en YouTube
+                </a>
+              }
+
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+  }
+
+</div>
